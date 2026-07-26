@@ -1,0 +1,293 @@
+/* =====================================================
+   24 The Complete Solution
+   style.css
+===================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Variables */
+:root{
+    --primary:#0056b3;
+    --secondary:#e63946;
+    --accent:#00b894;
+    --dark:#1b1b1b;
+    --light:#ffffff;
+    --gray:#777;
+    --light-gray:#f5f7fa;
+    --border:#dddddd;
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+    --radius:10px;
+    --transition:.3s ease;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    color:#333;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+/* Typography */
+
+h1{
+    font-size:54px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:38px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+p{
+    color:#555;
+    margin-bottom:18px;
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--secondary);
+}
+
+/* Header */
+
+header{
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+/* Logo */
+
+.logo h2{
+    margin:0;
+    color:var(--primary);
+}
+
+.logo span{
+    display:block;
+    font-size:13px;
+    color:#666;
+}
+
+/* Navigation */
+
+nav ul{
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    color:#333;
+    font-weight:500;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:var(--secondary);
+}
+
+/* Hero */
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/hero.jpg") center/cover no-repeat;
+    color:#fff;
+    text-align:center;
+    padding:160px 0;
+}
+
+.hero h1{
+    color:#fff;
+}
+
+.hero p{
+    color:#fff;
+    max-width:700px;
+    margin:20px auto 35px;
+}
+
+/* Services */
+
+.services{
+    background:#f8f9fb;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:#fff;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* CTA */
+
+.cta{
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+}
+
+.cta h2,
+.cta p{
+    color:#fff;
+}
+
+.cta .btn{
+    background:#fff;
+    color:var(--primary);
+}
+
+.cta .btn:hover{
+    background:var(--secondary);
+    color:#fff;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:60px 0 30px;
+}
+
+footer h3{
+    color:#fff;
+}
+
+footer p{
+    color:#ccc;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.social a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.social a:hover{
+    background:var(--primary);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header .container{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero{
+    padding:100px 0;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.service-grid{
+    grid-template-columns:1fr;
+}
+
+}
